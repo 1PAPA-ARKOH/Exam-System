@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="stylesheet" href="css/style.css">
+
+       <nav class="navbar">
+        <div class="logo">
+            <img class="cap" src="graduation-cap-with-tassel-element-for-degree-ceremony-and-educational-programs-design-vector.webp" alt="Graduation Cap">
+            <span>Student Examination System</span>
+        </div>
+        <div class="student-info">
+            <i class="fas fa-user-circle" style="font-size: 1.8rem;"></i>
+            <div id="student-name">PAPA ARKOH MENSAH (6224724)</div>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- Info Bar -->
+    <div class="info-bar">
+        <div class="info-item">
+            <i class="fas fa-book"></i>
+            <div>
+                <strong>Exam Title</strong><br>
+                <span id="exam-title">Web Development Exam</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-clipboard-list"></i>
+            <div>
+                <strong>Question</strong><br>
+                <span id="question-count">2 of 10</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+                <strong>Time Left</strong><br>
+                <span id="timer" class="timer">10:00</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- Left Sidebar - Navigation -->
+        <div class="navigation">
+            <h3 class="nav-title">Question Navigation</h3>
+            <div class="question-grid" id="question-grid"></div>
+            
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-dot" style="background:#22c55e;"></div>
+                    <span>Answered</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background:white; border:2px solid #666;"></div>
+                    <span>Unanswered</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Question Area -->
+        <div class="question-area">
+            <div class="question-header">
+                <h2 id="question-text">Which language is used to style webpages?</h2>
+            </div>
+            
+            <div class="options" id="options-container"></div>
+
+            <div class="action-buttons">
+                <button class="btn btn-prev" onclick="prevQuestion()">
+                    ← PREVIOUS
+                </button>
+                <button class="btn btn-next" onclick="nextQuestion()">
+                    NEXT →
+                </button>
+                <button class="btn btn-submit" onclick="submitExam()">
+                    SUBMIT EXAM
+                </button>
+            </div>
+        </div>
+        
+    </div>
+     <div class="footer">
+        © 2026 Student Examination System. All rights reserved.
+    </div>
+    <script src="js/exam.js"></script>
+</body>
+</html>

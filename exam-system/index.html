@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img class="cap" src="graduation-cap-with-tassel-element-for-degree-ceremony-and-educational-programs-design-vector.webp" alt="Graduation Cap">
+            <span>Student Examination System</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="instructions.html">Instructions</a>
+            <a href="history.html">History</a>
+        </nav>
+    </header>
+
+      <main class="container">
+        <section class="welcome-section">
+        <!--Left section-->
+        <h1>Welcome, <span class="highlight">Student!</span></h1>
+          <p>Enter your details to start the examination.</p>
+            <img src="young-black-student-holding-book-standing-front-university-building_1227660-1739.avif" alt="Study illustration" class="illustration">
+            <!-- Exam Instructions Box -->
+            <div class="instructions-box">
+                <h3>Exam Instructions</h3>
+                <ul>
+                    <li><i class="fas fa-user"></i> Total Questions: 10</li>
+                    <li><i class="fas fa-clock"></i> Time Allowed: 10 Minutes</li>
+                    <li><i class="fas fa-tag"></i> Each Question Carries: 1 Mark</li>
+                    <li><i class="fas fa-check-circle"></i> Choose one answer per question</li>
+                    <li><i class="fas fa-ban"></i> You cannot change answer after submission</li>
+                </ul>
+            </div>
+        </section>
+
+        <!--Right section-->
+        <section class="registration-card">
+            <h2>
+                <i class="fas fa-user-plus"></i> 
+                <span class="highlight">Student Registration</span>
+            </h2>
+            <form id="registrationForm" action="exam.html" method="GET">
+                  <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+                <label for="studentId">Student ID</label>
+                <input type="text" id="studentId" name="studentId" placeholder="Enter your student ID" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                <label for="programme">Programme</label>
+                <select id="programme" name="programme" required>
+                    <option value="">Select Programme</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="it">Information Technology</option>
+                    <option value="business">Business Administration</option>
+                    <option value="engineering">Engineering</option>
+                       </select>
+
+                <button type="submit" class="btn-start">
+                    <i class="fas fa-play"></i> START EXAM
+                </button>
+            </form>
+        </section>
+      </main>
+      
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>&copy; 2026 Student Examination System. All rights reserved.</p>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>

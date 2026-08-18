@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+     <nav class="navbar">
+        <div class="logo">
+            <img class="cap" src="graduation-cap-with-tassel-element-for-degree-ceremony-and-educational-programs-design-vector.webp" alt="Graduation Cap">
+            <span>Student Examination System</span>
+        </div>
+        <div class="student-info">
+            <i class="fas fa-user-circle" style="font-size: 1.8rem;"></i>
+            <div id="student-name">PAPA ARKOH MENSAH (6224724)</div>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </nav>
+
+    <div class="container result-layout">
+    <div class="result-card">
+      <!-- Left: Visual Result -->
+      <div class="visual">
+        <div class="progress-ring">
+          <svg viewBox="0 0 36 36">
+            <circle class="bg" cx="18" cy="18" r="15.9155"/>
+            <circle class="progress" cx="18" cy="18" r="15.9155"/>
+          </svg>
+          <div class="percentage">80%</div>
+        </div>
+        <p class="your-result">YOUR RESULT</p>
+        <div class="pass-text">
+          PASS <i class="fas fa-check-circle"></i>
+        </div>
+        <p class="congrats">Congratulations!</p>
+      </div>
+       <div class="divider"></div>
+
+      <!-- Middle: Summary -->
+      <div class="summary">
+        <h3>Result Summary</h3>
+        <div class="row">
+          <span class="label">Student Name</span>
+          <span class="value">PAPA ARKOH MENSAH</span>
+        </div>
+        <div class="row">
+          <span class="label">Student ID</span>
+          <span class="value">6224724</span>
+        </div>
+        <div class="row">
+          <span class="label">Total Questions</span>
+          <span class="value">10</span>
+        </div>
+        <div class="row">
+          <span class="label">Correct Answers</span>
+          <span class="value correct">8</span>
+        </div>
+        <div class="row">
+          <span class="label">Wrong Answers</span>
+          <span class="value wrong">2</span>
+        </div>
+        <div class="meta">
+          Date: 11th August 2026 &nbsp;|&nbsp; Time: 10:30 AM
+        </div>
+      </div>
+      
+       <!-- Right: Stats -->
+      <div class="stats">
+        <div class="stat score">
+          <span class="lbl">Score</span>
+          <span class="num">8 / 10</span>
+        </div>
+        <div class="stat percent">
+          <span class="lbl">Percentage</span>
+          <span class="num">80%</span>
+        </div>
+        <div class="stat grade">
+          <span class="lbl">Grade</span>
+          <span class="num">A</span>
+        </div>
+      </div>
+    </div>
+     <div class="actions">
+      <a href="exam.html" class="btn btn-retake">
+        <i class="fas fa-redo"></i> RETAKE EXAM
+      </a>
+      <a href="index.html" class="btn btn-home">
+        <i class="fas fa-home"></i> BACK TO HOME
+      </a>
+    </div>
+  </div>
+    <script src="js/result.js"></script>
+</body>
+</html>
