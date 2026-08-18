@@ -70,6 +70,37 @@ html, body {
 .nav-links a.active {
     border-bottom: 2px solid var(--primary);
 }
+
+/* ===== HAMBURGER TOGGLE (hidden on desktop) ===== */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.nav-toggle.open span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
 .container{
     flex: 1;
     display: grid;
@@ -95,9 +126,27 @@ html, body {
         gap: 10px;
     }
 
+    .nav-toggle {
+        display: flex;
+    }
+
     .nav-links {
-        gap: 20px;
-        flex-wrap: wrap;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+        order: 3;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .container {
@@ -619,7 +668,6 @@ html, body {
       font-size: 1.15rem;
       margin-bottom: 1.6rem;
       font-weight: 700;
-      margin-bottom: 15px;
       border-bottom: 1px solid var(--border);
     }
     .row{
