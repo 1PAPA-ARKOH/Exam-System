@@ -1,26 +1,6 @@
 // ===== WAIT FOR DOM TO LOAD =====
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ===== MOBILE NAV TOGGLE =====
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    if (navToggle && navLinks) {
-        navToggle.addEventListener('click', () => {
-            const isOpen = navLinks.classList.toggle('open');
-            navToggle.classList.toggle('open', isOpen);
-            navToggle.setAttribute('aria-expanded', isOpen);
-        });
-
-        // Close menu after a link is clicked
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('open');
-                navToggle.classList.remove('open');
-                navToggle.setAttribute('aria-expanded', 'false');
-            });
-        });
-    }
-
     // ===== GET FORM ELEMENTS =====
     const form = document.getElementById('registrationForm');
     const fullName = document.getElementById('fullName');
