@@ -4,8 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
+      <nav class="navbar">
+        <div class="logo">
+            <li class="fa-solid fa-graduation-cap"></li>
+            <span>Student Examination System</span>  
+        </div>
+        <div class="student-info">
+            <i class="fas fa-user-circle" style="font-size: 1.8rem;"></i>
+            <div id="student-name">PAPA ARKOH MENSAH (6224724)</div>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </nav>
+    <div class="exam-history-container">
+       <li class="fa-solid fa-clipboard"><p>Exam History</p></li> 
+        <div class="table-container">
+           <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Exam</th>
+                    <th>Score</th>
+                    <th>Percentage</th>
+                    <th>Grade</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>11th August 2026, 10:30 AM</td>
+                    <td>Web Development Exam</td>
+                    <td class="score">8 / 10</td>
+                    <td>80%</td>
+                    <td>A</td>
+                    <td><span class="pass">PASS</span></td>
+                </tr>
+
+                 <tr>
+                    <td>15th August 2026, 10:30 AM</td>
+                    <td>Advanced Programming In Java</td>
+                    <td class="score">9 / 10</td>
+                    <td>90%</td>
+                    <td>A</td>
+                    <td><span class="pass">PASS</span></td>
+                </tr>
+
+                 <tr>
+                    <td>21th August 2026, 10:30 AM</td>
+                    <td>System Analysis and Design</td>
+                    <td class="score">7.4 / 10</td>
+                    <td>75%</td>
+                    <td>A</td>
+                    <td><span class="pass">PASS</span></td>
+                </tr>
+
+                 <tr>
+                    <td>3rd Ocotober 2026, 10:30 AM</td>
+                    <td>Advanced Programming In Visual Basics</td>
+                    <td class="score">7 / 10</td>
+                    <td>70%</td>
+                    <td>A</td>
+                    <td><span class="pass">PASS</span></td>
+                </tr>
+
+                 <tr>
+                    <td>7th October 2026, 10:30 AM</td>
+                    <td>Content Managment System</td>
+                    <td class="score">8.5 / 10</td>
+                    <td>85%</td>
+                    <td>A</td>
+                    <td><span class="pass">PASS</span></td>
+                </tr>
+            </tbody>
+           </table>
+        </div><br>
+        <div class="button-div">
+        <button class="clear-button"><li class="fa-regular fa-trash-can"></li>CLEAR HISTORY</button>
+         <button class="back-button"><li class="fa-solid fa-house"></li>BACK TO HOME</button>
+        </div>
+    </div>
+    <script src="js/history.js"></script>
 </body>
 </html>
